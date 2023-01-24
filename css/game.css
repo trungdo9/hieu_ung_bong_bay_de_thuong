@@ -1,0 +1,301 @@
+.game_frame_overlay{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.game_frame{
+	position: relative;
+	z-index: 1;
+	overflow:hidden;
+	height:auto;
+	opacity: 1;
+    pointer-events: all;
+	transition:opacity ease 200ms;
+	z-index: 11;
+}
+.game_frame_inner {
+    background: url('../images/game_bg.png') no-repeat;
+    width: 842px;
+    height: 596px;
+    margin: 0 auto;
+    position: relative;
+	overflow:hidden;
+}
+
+.game_frame_inner .gel{
+	position:absolute;
+	background-repeat:no-repeat;
+}
+.game_grass{
+    top: 335px;
+    left: 40px;
+	width:771px;
+	height:203px;
+	background:url('../images/game/grass_bg.png') no-repeat;
+}
+.game_monkey_wrap,
+.game_monkey{
+	width:200px;
+	height:150px;
+}
+.game_monkey_wrap{
+    top: 246px;
+    left: 310px;
+}
+	.game_monkey_wrap.flip{
+		/*transform:scaleX(-1);*/
+	}
+	
+.game_monkey{
+	background:url('../images/game/monkey_200x150.png') no-repeat;
+}
+.game_monkey_wrap.flip .game_monkey{
+	background-image:url('../images/game/monkey_200x150_flip.png');
+}
+
+.hand_wrapper{
+	position: absolute;
+	bottom: 0;
+	left: 490px;
+	width: 146px;
+	height: 220px;
+	transition:transform ease 500ms;
+	transform:translate(0, 0);
+}
+	.hand_wrapper.hide{
+		transform:translate(0, 240px);
+	}
+	
+.hand{
+	position: absolute;
+	width:146px;
+	height:220px;
+	background:url('../images/game/hand_146x220.png') no-repeat;
+}
+
+.game_coin_wrapper{
+	width:36px;
+	height:36px;
+    top: 380px;
+    left: 490px;
+}
+.game_coin{
+	top:0;left:0;
+	width:36px;
+	height:36px;
+	background:url('../images/game/coin_36x36.png') no-repeat;	
+}
+
+.btn_game_start{
+	cursor:pointer;
+	width:74px;
+	height:31px;
+	top:64px;
+	left:98px;
+	background:url('../images/game/btn_game_start_74x31.png') no-repeat;
+}
+
+.game_hint{
+    width: 280px;
+    height: 200px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+.game_hint.hide{
+	transition:all ease 500ms;
+	transform:translate(0, 210px);
+}
+
+.game_hutroi{
+	width:92px;
+	height:64px;
+    top: 210px;
+    left: 360px;
+	background:url('../images/game/hutroi_92x64.png');
+	opacity:0;
+	transition:opacity ease 500ms, transform ease 500ms;
+	transform:translate(0, 0);
+}
+.game_hutroi.show{
+	opacity:1;
+	transform:translate(0, -5px);
+}
+	.game_hint .game_hint_text {
+	    width: 270px;
+	    height: 151px;
+	    background: url('../images/game_hint.png') center no-repeat;
+	    position: absolute;
+	    z-index: 1;
+	    top: 34px;
+	}
+	.game_hint .game_hint_monkey {
+	    width: 83px;
+	    height: 59px;
+	    background: url(../images/game_hint_monkey_head.png) center no-repeat;
+	    position: absolute;
+	    bottom: -15px;
+	    left: 55px;
+	    z-index: 0;
+	}
+
+
+#popup_trungroi{
+	width:482px;
+	height:429px;
+    border: 0;
+    box-shadow: none;
+	background:url('../images/game/trungroi_482x429.png');
+}
+.zui-popup-page-cover-popup_trungroi{
+	opacity:1 !important;
+	background:rgba(0, 0, 0, 0.8) !important;
+}
+.btn_game_done_uocngay{
+	position:absolute;
+	cursor:pointer;
+	width:118px;
+	height:37px;
+    top: 267px;
+    left: 168px;
+	background:url('../images/game/btn_game_uocngay_118x37.png') no-repeat;
+}
+
+
+
+.game_frame_overlay.hide{
+	height: 0;
+	opacity: 0;
+}
+.game_frame.hide{
+	opacity: 0;
+	height:0;
+    pointer-events: none;
+}
+
+
+.screen_page_game{
+    background: #ea2231;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	position:absolute;
+	z-index:2;
+}
+.screen_page_game .mainwidth{
+	width:842px;
+}
+
+.screen_page_game .flower_left .flowers1 {
+	width: 612px;
+	height: 335px;
+	background: url('../images/drthanh_flower_bg_left.png') no-repeat;
+	opacity: 0.5;
+}
+.screen_page_game .flower_right .flowers3 {
+	width: 612px;
+	height: 335px;
+	background: url('../images/drthanh_flower_bg_right.png') no-repeat;
+	opacity: 0.6;
+}
+
+
+.flower_left,
+.flower_right{
+    pointer-events: none;
+}
+
+.col_right{
+	position:relative;
+	height:500px;
+}
+.form_input{
+	position:absolute;
+}
+.chon_chu_de{
+	position:absolute;
+}
+.chon_chu_de.show{
+	opacity:1;
+}
+
+.step_slide{
+    position: absolute;
+	opacity:1;
+	transform:translate(0, 0);
+    pointer-events: all;
+	transition:opacity ease 800ms, transform ease 800ms;
+}
+.step_slide.hideleft{
+	opacity:0;
+	transform:translate(-20px, 0);
+    pointer-events: none;
+}
+.step_slide.hideright{
+	opacity:0;
+	transform:translate(20px, 0);
+    pointer-events: none;
+}
+
+.btn_tieptuc.disable{
+	opacity:0.5;
+	cursor:default;
+}
+
+
+
+.vongquaythuong{
+    top: 88px;
+    left: 152px;
+    height: 280px;
+    width: 240px;
+	position:absolute;
+	background:url('../images/vongquaythuong.png') left top repeat-y;
+}
+
+
+.thongbao_ketqua .thongbao_trungthuong_aothun {
+    width: 672px;
+    height: 430px;
+    background: url('../images/drthanh_chucmungtrungthuong_aothun.png') center no-repeat;
+}
+.thongbao_ketqua .thongbao_trungthuong_card20 {
+    width: 672px;
+    height: 430px;
+    background: url('../images/drthanh_chucmungtrungthuong_card20.png') center no-repeat;
+}
+.thongbao_ketqua .thongbao_trungthuong_card50 {
+    width: 672px;
+    height: 430px;
+    background: url('../images/drthanh_chucmungtrungthuong_card50.png') center no-repeat;
+}
+
+
+.dangkythongtin .checktip .text {
+    font-size: 14px;
+    color: #FFF !important;
+    background-color: #F00;
+    display: inline;
+    padding: 3px 14px;
+    border-radius: 7px;
+    position: absolute;
+    right: 0;
+    margin-top: -51px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.boxcount .boxcount_inner{
+	display:block;
+	padding-top:32px;
+}
+.boxcount .boxcount_inner .boxcount_number{
+	font-family: 'UVNMangTre', Arial, Tahoma;
+    font-size: 42px;
+    text-indent: -13px;
+}

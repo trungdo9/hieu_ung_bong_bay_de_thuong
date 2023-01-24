@@ -1,0 +1,122 @@
+body{
+}
+body.ready {
+}
+
+/* disable auto fill background color */
+/*input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0) inset;
+	-webkit-text-fill-color: #000 !important;
+} -> don't work */
+/* if need a transparent background */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+} -> -> this worked! */
+
+.baiviet_list_headline_right {
+	float: right;
+	margin-right: 28px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.baiviet_list_headline_right a {
+	text-decoration: none;
+	color: #ae7244;
+	font-size: 14px;
+	opacity: 0.8;
+}
+.tetamtinhthuong .tetamtinhthuong_detail_right h1 {
+	font-size: 16px;
+}
+.tetamtinhthuong .tetamtinhthuong_detail_content p {
+	font-size: 14px;
+}
+.tetamtinhthuong .tetamtinhthuong_detail_right .username_wrapper  {
+	float: right;
+	height: 32px;
+	line-height: 32px;
+}
+.tetamtinhthuong .baiviet_list .baiviet_item {
+	width: 212px;
+	margin-bottom: 10px !important;
+}
+.tetamtinhthuong .baiviet_list .baiviet_item.video_item,
+.tetamtinhthuong .baiviet_list .baiviet_item.video_item .baiviet_item_image {
+	height: 160px;	
+}
+.tetamtinhthuong .baiviet_item_image {
+	position: relative;
+}
+.tetamtinhthuong .item_image_youtube_icon {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: url(../images/youtube-48.png) center no-repeat;
+}
+.tetamtinhthuong_header_left {
+	width: 430px;
+	float: left;
+}
+.tetamtinhthuong_header_right {
+	width: 250px;
+	float: right;
+	margin-right: 20px;
+}
+.tetamtinhthuong_header_left .video_noibat_1 {
+	width: 100%;
+	height: 266px;
+}
+.tetamtinhthuong_header_left .video_noibat_1 .video_noibat_image {
+	width: 100%;
+	height: 266px;
+	position: relative;
+}
+.tetamtinhthuong_header_right .video_noibat_2 {
+	width: 220px;
+	height: 170px;
+	float: right
+}
+.tetamtinhthuong_header_right .video_noibat_2 .video_noibat_image {
+	width: 100%;
+	height: 170px;
+	position: relative;
+}
+.tetamtinhthuong_header_right .video_noibat_2 .video_noibat_image a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.video_noibat_image_icon_youtube {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: url(../images/youtube-48.png) center no-repeat;
+}
+.tetamtinhthuong_header_thongtinchuongtrinh {
+	width: 220px;
+	height: 39px;
+	background: url(../images/tetamtinhthuong_thongtin.png) no-repeat;
+	float: right;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.tetamtinhthuong_header_danhsach {
+	width: 220px;
+	height: 37px;
+	background: url(../images/tetamtinhthuong_danhsach.png) no-repeat;
+	float: right;
+	margin-bottom: 10px;	
+	cursor: pointer;
+}
+.tetamtinhthuong .baiviet_list .baiviet_item .baiviet_item_desc {
+	min-height: 60px;
+}

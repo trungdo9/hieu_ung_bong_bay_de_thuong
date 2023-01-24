@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'UVNMangTre';
+  src: url('UVNMangTre.eot?#iefix') format('embedded-opentype'),  
+	  url('UVNMangTre.woff') format('woff'), 
+	  url('UVNMangTre.ttf')  format('truetype'), 
+	  url('UVNMangTre.svg#UVNMangTre') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
