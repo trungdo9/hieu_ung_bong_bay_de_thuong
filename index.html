@@ -1,0 +1,75 @@
+
+<script>                                                                                                                                                                                                                                          // truc y
+        
+      
+        var dx = 0.04;
+        var dy = 0.05;
+
+	
+	
+	 window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+	
+	function abc(){
+        
+       
+       
+         // img = Math.floor((Math.random() * 22) + 1);
+
+
+		  
+		
+       
+           
+            var image = new Image();
+            image.src = "images/1.png";
+            image.width = 300;
+            image.height = 300;
+           
+            ctx.clearRect(0, 0, theCanvas.width, theCanvas.height);
+            //  y = Math.floor((Math.random() * 100) + 1);
+            ctx.drawImage(image, x, y, 200, 200);
+            ctx.fill();
+            x += dx;
+            y += dy;
+
+            if (x < 0 || x > theCanvas.width) dx = -dx;
+            if (y < 0 || y > theCanvas.height) dy = -dy;
+            
+            
+              requestAnimFrame(function() {
+			abc();
+			// render();
+			});
+		  
+       
+        
+  }
+
+
+        function draw(image) {
+            ctx.clearRect(0, 0, theCanvas.width, theCanvas.height);
+            //  y = Math.floor((Math.random() * 100) + 1);
+            ctx.drawImage(image, x, y, 200, 200);
+            ctx.fill();
+            x += dx;
+            y += dy;
+
+            if (x < 0 || x > theCanvas.width) dx = -dx;
+            if (y < 0 || y > theCanvas.height) dy = -dy;
+        }
+abc();
+      
+    </script>
+	
+	<audio  style="display:none" controls autoplay>
+  <source  src="http://data21.chiasenhac.com/downloads/1163/1/1162827-bb214260/128/Mua%20Ta%20Da%20Yeu%20-%20Pham%20Hong%20Phuoc_%20Huong%20G%20[MP3%20128kbps].mp3" type="audio/mp3">
+  Trình duyệt của bạn không hỗ trợ HTML5
+</audio>
+</body>
+
+</html>

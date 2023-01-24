@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.flower_left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -180px;
+    width: 612px;
+    height: 335px;
+    z-index: 1;
+}
+
+.flower_left,
+.flower_right {
+    pointer-events: none;
+}
+
+.flower_right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -70px;
+    width: 612px;
+    height: 335px;
+    z-index: 1;
+}
+
+.flower_left .flowers1 {
+    width: 612px;
+    height: 335px;
+    background: url('images/drthanh_flower_bg_left_wb.png') no-repeat;
+    opacity: 0.6;
+}
+
+.flower_left .flowers2 {
+    width: 336px;
+    height: 277px;
+    background: url('images/flowers1.png') no-repeat;
+    position: absolute;
+    bottom: -128px;
+    left: 0;
+    opacity: 0.9;
+}
+
+.flower_rotate1 {
+    background: url(images/flower_rotate_1.png);
+    width: 158px;
+    height: 158px;
+    -webkit-animation: zoomIn2 20s infinite linear;
+    animation: zoomIn2 20s infinite linear;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.flower_rotate2 {
+    background: url(images/flower_rotate_2.png);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: zoomIn2 25s infinite linear;
+    animation: zoomIn2 25s infinite linear;
+    position: absolute;
+    top: 87px;
+    right: 70px;
+}
+
+.flower_rotate3 {
+    background: url(images/flower_rotate_3.png);
+    width: 94px;
+    height: 94px;
+    -webkit-animation: zoomIn2 30s infinite linear;
+    animation: zoomIn2 30s infinite linear;
+    position: absolute;
+    top: 162px;
+    left: 5px;
+}
+
+.flower_rotate4 {
+    background: url(images/flower_rotate_4.png);
+    width: 102px;
+    height: 102px;
+    -webkit-animation: zoomIn2 15s infinite linear;
+    animation: zoomIn2 15s infinite linear;
+    position: absolute;
+    top: 148px;
+    left: 72px;
+}
+
+.flower_rotate5 {
+    background: url(images/flower_rotate_5.png);
+    width: 74px;
+    height: 74px;
+    -webkit-animation: zoomIn2 20s infinite linear;
+    animation: zoomIn2 20s infinite linear;
+    position: absolute;
+    top: 206px;
+    left: 224px;
+}
+
+.flower_right .flowers3 {
+    width: 612px;
+    height: 335px;
+    background: url('images/drthanh_flower_bg_right_wb.png') no-repeat;
+    opacity: 0.5;
+}
+
+.flower_right .flowers4 {
+    width: 314px;
+    height: 289px;
+    background: url(images/flowers2.png) no-repeat;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    opacity: 0.9;
+}
+
+.flower_right .flower_rotate1 {
+    top: 26px;
+    left: 170px;
+}
+
+.flower_right .flower_rotate2 {
+    top: 140px;
+    right: 118px;
+}
+
+.flower_right .flower_rotate3 {
+    top: -5px;
+    left: 115px;
+}
+
+.flower_right .flower_rotate4 {
+    top: 56px;
+    left: 80px;
+}
+
+.flower_right .flower_rotate5 {
+    top: 160px;
+    left: 5px;
+}
+
+
+/* ------------------------------------------ */
+
+@keyframes zoomIn2 {
+    0% {
+        opacity: 1;
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        opacity: 1;
+        transform: scale3d(.8, .8, .8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale3d(.3, .3, .3);
+        transform: rotate(50deg);
+    }
+    80% {
+        opacity: 1;
+        transform: scale3d(.8, .8, .8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(.3, .3, .3);
+    }
+}
+
+@-webkit-keyframes zoomIn2 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: scale3d(.8, .8, .8);
+    }
+    50% {
+        opacity: 1;
+        -webkit-transform: scale3d(.3, .3, .3);
+        -webkit-transform: rotate(50deg);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: scale3d(.8, .8, .8);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(.3, .3, .3);
+    }
+}
+
+@keyframes hlswing {
+    20% {
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@-webkit-keyframes hlswing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@keyframes hlswing2 {
+    20% {
+        transform: rotate3d(0, 0, 1, 25deg);
+    }
+    40% {
+        transform: rotate3d(0, 0, 1, -20deg);
+    }
+    60% {
+        transform: rotate3d(0, 0, 1, 10deg);
+    }
+    80% {
+        transform: rotate3d(0, 0, 1, -15deg);
+    }
+    to {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+@-webkit-keyframes hlswing2 {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 25deg);
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -20deg);
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 10deg);
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -15deg);
+    }
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.screen_page_game {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+body {
+    background: #ea2231;
+}
+.clearboth{clear: both;display: block;}
+body .page_home {
+    position: relative;
+    overflow: hidden;
+}
+
+.screen_page_game .flower_left .flowers1 {
+    width: 612px;
+    height: 335px;
+    background: url('images/drthanh_flower_bg_left.png') no-repeat;
+    opacity: 0.5;
+}
+
+.screen_page_game .flower_left .flowers1 {
+    width: 612px;
+    height: 335px;
+    background: url('images/drthanh_flower_bg_left.png') no-repeat;
+    opacity: 0.5;
+}
+
+.screen_page_game .flower_right .flowers3 {
+    width: 612px;
+    height: 335px;
+    background: url('images/drthanh_flower_bg_right.png') no-repeat;
+    opacity: 0.6;
+}
+
+canvas {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    left: 0;
+    right: 0;
+}

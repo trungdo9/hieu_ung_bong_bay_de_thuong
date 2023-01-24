@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <script src="jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="style2.css" />
+<style>
+#parent {
+    left: 0;
+    top: 0;
+	z-index:999;
+    height: 800px;
+    width: 100%;
+}
+
+.message,.message-1 , .message img,.message-1 img{
+    height: 220px;
+    width: 220px;
+    background: #000;
+    color: #fff;
+    z-index: -9999;
+    line-height: 115px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    -webkit-border-radius: 110px;
+    -moz-border-radius: 110px;
+    border-radius: 110px;
+}
+	</style>
+</head>
+
+<body>
+    <div class="wrapper screen page_home clearfix" style="position:relative;z-index:1;">
+        <div class="flower_left">
+            <div class="flowers1"></div>
+            <div class="flowers2">
+                <div class="flower_rotate1"></div>
+                <div class="flower_rotate2"></div>
+                <div class="flower_rotate3"></div>
+                <div class="flower_rotate4"></div>
+                <div class="flower_rotate5"></div>
+            </div>
+        </div>
+        <div class="flower_right">
+            <div class="flowers3"></div>
+            <div class="flowers4">
+                <div class="flower_rotate1"></div>
+                <div class="flower_rotate2"></div>
+                <div class="flower_rotate3"></div>
+                <div class="flower_rotate4"></div>
+                <div class="flower_rotate5"></div>
+            </div>
+        </div>
+        <div class="screen screen_page_game">
+
+            <div class="mainwidth">
+                <div class="flower_left">
+                    <div class="flowers1"></div>
+                    <div class="flowers2">
+                        <div class="flower_rotate1"></div>
+                        <div class="flower_rotate2"></div>
+                        <div class="flower_rotate3"></div>
+                        <div class="flower_rotate4"></div>
+                        <div class="flower_rotate5"></div>
+                    </div>
+                </div>
+                <div class="flower_right">
+                    <div class="flowers3"></div>
+                    <div class="flowers4">
+                        <div class="flower_rotate1"></div>
+                        <div class="flower_rotate2"></div>
+                        <div class="flower_rotate3"></div>
+                        <div class="flower_rotate4"></div>
+                        <div class="flower_rotate5"></div>
+                    </div>
+                </div>
+
+                <div id="parent">
+				<div class="message"><img src="images/1.png" /></div>
+				<div class="message"><img src="images/2.png" /></div>
+				<div class="message"><img src="images/3.png" /></div>
+				<div class="message"><img src="images/4.png" /></div>
+				<div class="message"><img src="images/5.png" /></div>
+				<div class="message"><img src="images/6.png" /></div>
+				<div class="message"><img src="images/7.png" /></div>
+				<div class="message"><img src="images/8.png" /></div>
+				<div class="message"><img src="images/9.png" /></div>
+				<div class="message"><img src="images/10.png" /></div>
+				<div class="message"><img src="images/11.png" /></div>
+				<div class="message"><img src="images/12.png" /></div>
+				<div class="message"><img src="images/13.png" /></div>
+				<div class="message"><img src="images/14.png" /></div>
+				<div class="message"><img src="images/15.png" /></div>
+				<div class="message"><img src="images/16.png" /></div>
+				<div class="message"><img src="images/17.png" /></div>
+				<div class="message"><img src="images/18.png" /></div>
+				<div class="message"><img src="images/19.png" /></div>
+				<div class="message"><img src="images/20.png" /></div>
+				<div class="message"><img src="images/21.png" /></div>
+				<div class="message"><img src="images/22.png" /></div>
+    
+  </div>
+
+
+                <div class="clearboth"></div>
+            </div>
+        </div>
+        <div class="clearboth"></div>
+    </div>
+    <script type="text/javascript">
+	
+	var my_width = jQuery(window).width();
+	var my_height = jQuery(window).height();
+	
+	  jQuery("#parent").css({
+            "height": my_height,
+            "width": my_width
+        });
+	
+	// shim layer with setTimeout fallback
+window.requestAnimationFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+(function(){
+    var $parent= $("#parent"),
+    $elements= $('.message', $parent),
+    vertSpeed= .5,
+    horiSpeed= 1;
+    
+    var height=$parent.height(),
+    width=$parent.width();
+    $parent.css("position", "relative")
+    .css("overflow", "hidden");
+        
+    // store all the data for animation
+    var items= [];
+    for(var i=0; i<$elements.length; i++){
+        var $element= $($elements[i]),
+        elementWidth= $element.width(),
+        elementHeight= $element.height();
+        
+        $element.css("position", "absolute");
+        var item= {
+            element: $element[0],
+            elementHeight: elementHeight,
+            elementWidth: elementWidth,
+            ySpeed: -vertSpeed,
+            
+            omega: 2*Math.PI* horiSpeed/(width*60), //omega= 2Pi*frequency
+            random: (Math.random()/2+0.5) * i * 10000, //random time offset
+            x: function(time){
+				tmp = (Math.sin(this.omega *(time+this.random)) + 1)/2 * (width-elementWidth);
+				if(tmp==0){
+					return -(tmp);
+				}else{
+					 return tmp;
+				}
+               
+            },
+            y: height + (Math.random()+1)*i*elementHeight,
+        }
+        items.push(item);
+    }
+
+    var counter=0;
+    var animationStep= function(){ //called 60 times a second
+        var time=+new Date(); //little trick, gives unix time in ms
+        var check= (counter%10 === 0);
+        
+        for(var i=0; i<items.length; i++){
+            var item= items[i];
+            
+            transformString= "translate3d("+item.x(time)+"px,"+item.y+"px,0px)";
+            item.element.style.transform= transformString;
+            item.element.style.webkitTransform= transformString;
+            
+            item.y += item.ySpeed;
+            if(check && item.y < -item.elementHeight){ //check bounds every 10th iteration
+                item.y= height;
+            }
+        }
+        
+        counter%=10;
+        counter++;
+        requestAnimationFrame(animationStep); 
+    }
+    
+    requestAnimationFrame(animationStep);   
+}());
+    </script>
+	
+</body>
+
+</html>
